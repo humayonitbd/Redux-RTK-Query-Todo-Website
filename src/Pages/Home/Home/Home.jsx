@@ -1,14 +1,16 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
+import { useGetPostsQuery } from '../../../redux/features/api/baseApi';
 
 const Home = () => {
+
+    const datas = useGetPostsQuery();
+    console.log(datas)
+
     return (
-        <div className='bg-red-500'>
-            <h2 className='bg-blue-300'>Home page</h2>
-            <button className='bg-green-500'>button</button>
-            <button>button</button>
-            <button>button</button>
-        </div>
+      <div className="">
+        <h2>Posts Data {datas.data.length}</h2>
+      </div>
     );
 };
 
