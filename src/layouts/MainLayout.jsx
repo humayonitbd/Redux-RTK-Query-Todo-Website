@@ -5,6 +5,12 @@ import { Outlet } from 'react-router-dom';
 const MainLayout = () => {
     return (
         <div>
+            <nav>
+                <ul className='flex justify-center items-center'>
+                    <li>Home</li>
+                    <li>About</li>
+                    </ul>
+                </nav>
             <Outlet />
         </div>
     );
