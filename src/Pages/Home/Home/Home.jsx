@@ -4,9 +4,15 @@ import { useGetPostsQuery } from '../../../redux/features/api/baseApi';
 
 const Home = () => {
 
-    const {data,isLoading} = useGetPostsQuery();
+    const {data,isLoading,isError} = useGetPostsQuery();
     console.log(data)
+    if(isLoading){
+      return <p className='text-2xl text-red-600 text-center mb-5'>Loading.....</p>
+    }
 
+    if(!isLoading && isError){
+      return <p className='text-white text-center text-2xl py-5'>Something is Error..!</p>
+    }
     return (
       <div className="my-10 mx-20">
         {data?.map((item) => (
