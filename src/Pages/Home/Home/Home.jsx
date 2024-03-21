@@ -4,12 +4,17 @@ import { useGetPostsQuery } from '../../../redux/features/api/baseApi';
 
 const Home = () => {
 
-    const datas = useGetPostsQuery();
-    console.log(datas)
+    const {data,isLoading} = useGetPostsQuery();
+    console.log(data)
 
     return (
-      <div className="">
-        <h2>Posts Data {datas.data.length}</h2>
+      <div className="my-10 mx-20">
+        {data?.map((item) => (
+          <div key={item.id} className=" p-10 bg-zinc-600  mb-3">
+            <h3 className="text-xl mb-3 text-white ">{item.title}</h3>
+            <h3 className="text-white">{item.body}</h3>
+          </div>
+        ))}
       </div>
     );
 };
