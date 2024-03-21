@@ -7,9 +7,12 @@ export const baseApi = createApi({
     getPosts:builder.query({
         query:()=>"/posts",
     }),
+    getPostById:builder.query({
+        query:(id)=>`/posts/${id}`,
+    }),
     
   }),
 })
 
-export const {useGetPostsQuery} = baseApi;
+export const {useGetPostsQuery,useGetPostByIdQuery} = baseApi;
 
