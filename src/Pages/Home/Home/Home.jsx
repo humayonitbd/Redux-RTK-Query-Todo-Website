@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
 
-    const {data,isLoading,isError} = useGetPostsQuery();
+    const {data,isLoading,isError,error} = useGetPostsQuery();
     console.log(data)
     if(isLoading){
       return <p className='text-2xl text-red-600 text-center mb-5'>Loading.....</p>
@@ -13,6 +13,9 @@ const Home = () => {
 
     if(!isLoading && isError){
       return <p className='text-white text-center text-2xl py-5'>Something is Error..!</p>
+    }
+    if(error){
+      return <p>Error is : {error} </p>
     }
     return (
       <div className="my-10 mx-20">
