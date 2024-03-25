@@ -1,13 +1,17 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useCreatePostMutation } from '../../redux/features/api/baseApi';
 
 const Post = () => {
   const {register, handleSubmit,reset} = useForm();
+  const [createPost,{data:postData}] = useCreatePostMutation();
+  console.log(postData)
   const onsubmit=(data)=>{
-    console.log(data)
+    createPost(data);
     reset()
   }
+
     return (
       <div className="bg-zinc-800 h-screen">
         <h3 className="text-center text-xl font-bold mb-5">Post Page</h3>
@@ -21,7 +25,7 @@ const Post = () => {
               type="text"
               placeholder="Text type here"
               className="input input-bordered w-full  mb-3 mt-2"
-            /> <br />
+            /><br />
             <button className="bg-green-500 text-white text-lg px-5 py-1 rounded" type="submit">
               Submit
             </button>

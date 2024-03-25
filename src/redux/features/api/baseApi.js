@@ -11,7 +11,11 @@ export const baseApi = createApi({
         query:(id)=>`/posts/${id}`,
     }),
     createPost:builder.mutation({
-        query:()=>`/posts`,
+        query:(post)=>({
+          url:"/posts",
+          method:"POST",
+          body: post,
+        }),
     }),
     
   }),
