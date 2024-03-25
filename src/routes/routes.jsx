@@ -15,7 +15,10 @@ const routes = createBrowserRouter([
         path: `/posts/:id`,
         element: <Details />,
       },
-      
+      {
+        path: `/post-page`,
+        element: < />,
+      },
     ],
   },
 ]);
