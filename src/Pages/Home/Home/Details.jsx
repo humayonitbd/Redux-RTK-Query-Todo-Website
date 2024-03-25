@@ -8,13 +8,11 @@ const Details = () => {
     const {data:item}= useGetPostByIdQuery(id);
     
     return (
-      <div className="my-20 mx-20">
-          <div  className=" p-10 bg-zinc-600  mb-3">
-            <h3 className="text-xl mb-3 text-white ">{item?.title}</h3>
-            <h3 className="text-white">{item?.body}</h3>
-          
-          </div>
-       
+      <div className="bg-zinc-800 py-20 px-20">
+        <div className=" p-10 bg-zinc-600  mb-3">
+          <h3 className="text-xl mb-3 text-white ">{item?.title}</h3>
+          <h3 className="text-white">{item?.body}</h3>
+        </div>
       </div>
     );
 };

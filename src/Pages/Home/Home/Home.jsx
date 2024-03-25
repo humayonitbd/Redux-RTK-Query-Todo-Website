@@ -18,17 +18,19 @@ const Home = () => {
       return <p>Error is : {error} </p>
     }
     return (
-      <div className="my-10 mx-20">
-        {data?.map((item) => (
-          <>
-            <Link to={`/posts/${item.id}`}>
-              <div key={item.id} className=" p-10 bg-zinc-600  mb-3">
-                <h3 className="text-xl mb-3 text-white ">{item.title}</h3>
-                <h3 className="text-white">{item.body}</h3>
-              </div>
-            </Link>
-          </>
-        ))}
+      <div className="bg-zinc-800  py-10">
+        <div className="mx-20 ">
+          {data?.map((item) => (
+            <>
+              <Link to={`/posts/${item.id}`}>
+                <div key={item.id} className=" p-10 bg-zinc-600  mb-3">
+                  <h3 className="text-xl mb-3 text-white ">{item.title}</h3>
+                  <h3 className="text-white">{item.body}</h3>
+                </div>
+              </Link>
+            </>
+          ))}
+        </div>
       </div>
     );
 };
