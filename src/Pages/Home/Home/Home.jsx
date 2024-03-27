@@ -6,16 +6,16 @@ import { Link } from 'react-router-dom';
 const Home = () => {
 
     const {data,isLoading,isError,error} = useGetPostsQuery();
-    console.log(data)
+    
     if(isLoading){
-      return <p className='text-2xl text-red-600 text-center mb-5'>Loading.....</p>
+      return <p className='text-2xl text-red-600 text-center mb-5'>Loading.....!</p>
     }
 
     if(!isLoading && isError){
       return <p className='text-white text-center text-2xl py-5'>Something is Error..!</p>
     }
     if(error){
-      return <p className='text-white text-center text-2xl py-5' >Error is : {error} </p>
+      return <p className='text-white text-center text-2xl py-5' >Error : {error} </p>
     }
     return (
       <div className="bg-zinc-800  py-10">
