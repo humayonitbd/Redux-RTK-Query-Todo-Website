@@ -19,7 +19,7 @@ const MainLayout = () => {
         <Outlet />
         <div className='py-10 text-white flex justify-center items-center'>
           <h1 className='text-center text-white text-xl mb-3'>Humayon Foird</h1>
-          
+          <p className='text-center text-white '></p>
         </div>
       </div>
     );
