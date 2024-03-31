@@ -18,7 +18,8 @@ const MainLayout = () => {
         </nav>
         <Outlet />
         <div className='py-10 text-white flex justify-center items-center'>
-          <p>Footer is Here</p>
+          <h1 className='text-center text-white text-xl mb-3'>Humayon Foird</h1>
+          
         </div>
       </div>
     );
