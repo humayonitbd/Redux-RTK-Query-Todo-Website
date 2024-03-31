@@ -4,7 +4,7 @@ import { Link, Outlet } from 'react-router-dom';
 
 const MainLayout = () => {
     return (
-      <div >
+      <div>
         <nav className="text-white bg-black py-3">
           <ul className="flex justify-center items-center">
             <Link>
@@ -17,9 +17,11 @@ const MainLayout = () => {
           </ul>
         </nav>
         <Outlet />
-        <div className='py-10 text-white flex justify-center items-center'>
-          <h1 className='text-center text-white text-xl mb-3'>Humayon Foird</h1>
-          <p className='text-center text-white '></p>
+        <div className="py-10 text-white flex justify-center items-center">
+          <h1 className="text-center text-white text-xl mb-3">Humayon Foird</h1>
+          <p className="text-center text-white ">
+            @Copyright-2024(Humayon Foird)
+          </p>
         </div>
       </div>
     );
